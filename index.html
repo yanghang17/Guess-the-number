@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta content="text/html;charset=utf-8">
+
+    <title></title>
+
+</head>
+<body>
+<script>
+  var s=
+  parseInt(Math.random()*(10-0+1)+0);
+  do{
+      var input=prompt("请输入:");
+      if (input=="exit"){
+         document.write("退出");
+         break;
+   }else{
+       input=parseInt(input);
+       if (input>s){alert("大了");
+       }else if(input<s){alert("小了");
+       }else{alert("答对了");}
+}
+}while (input!=s);
+</script>
+</body>
+</html>
+
+<!--
+1.使用do...while，属于先执行一遍，最后审查是否符合条件，符合继续循环体，否则终止执行；
+2.函数function里的var属于局部作用域，其他的任何地方var都是全局声明；
+3.随机数的公式parseInt(Math.random()*(max-min+1)+min) ；-->
